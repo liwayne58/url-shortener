@@ -1,0 +1,46 @@
+name: 問題詢問
+description: 提出與專案相關的問題
+title: "[QUESTION] "
+labels: ["question"]
+assignees: []
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: 你的問題
+      description: 請詳細描述你想詢問的內容。
+      placeholder: 例如：這個專案支援多語言嗎？
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景資訊
+      description: 提供與問題相關的背景或你已經嘗試過的內容。
+      placeholder: 例如：我查看了 README，但沒找到相關說明。
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 問題類別
+      description: 這個問題屬於哪個範疇？
+      options:
+        - 安裝與配置
+        - 使用方式
+        - 功能相關
+        - 其他
+      default: 0
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 附加資訊
+      description: 是否有其他相關資訊或參考資料？
+      placeholder: 例如：我正在使用 v1.2.3 版本。
+    validations:
+      required: false
