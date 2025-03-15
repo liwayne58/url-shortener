@@ -1,0 +1,45 @@
+name: 功能請求
+description: 提交新功能的建議或請求
+title: "[FEATURE] "  # 預設標題前綴
+labels: ["feature"]   # 自動添加標籤
+assignees: []         # 可選：預設指派人
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 功能描述
+      description: 請詳細描述你希望新增的功能是什麼。
+      placeholder: 例如：我想新增一個使用者登入頁面，包含電子郵件和密碼欄位。
+    validations:
+      required: true     # 必填
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 預期行為
+      description: 描述這個功能應該如何運作。
+      placeholder: 例如：使用者輸入正確的電子郵件和密碼後，應跳轉到主頁。
+    validations:
+      required: true     # 必填
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先級
+      description: 這個功能的優先級是什麼？
+      options:
+        - 低
+        - 中
+        - 高
+      default: 1         # 預設選中「中」
+    validations:
+      required: false    # 可選
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 附加資訊
+      description: 有沒有其他相關資訊或參考資料（例如截圖、連結）？
+      placeholder: 例如：參考這個網站的設計 https://example.com
+    validations:
+      required: false    # 可選
