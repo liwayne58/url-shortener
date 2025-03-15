@@ -1,0 +1,41 @@
+name: 文件改進
+description: 建議改進專案的文件
+title: "[DOCS] "
+labels: ["documentation"]
+assignees: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 文件問題描述
+      description: 請說明哪部分文件需要改進或有什麼問題。
+      placeholder: 例如：安裝指南缺少某個步驟的說明。
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 改進建議
+      description: 提供你對文件的具體建議。
+      placeholder: 例如：建議在安裝步驟中新增「檢查依賴版本」的說明。
+    validations:
+      required: true
+
+  - type: input
+    id: file-reference
+    attributes:
+      label: 相關文件路徑
+      description: 指定需要改進的文件（若知道具體位置）。
+      placeholder: 例如：docs/installation.md
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 附加資訊
+      description: 是否有其他相關資訊或參考資料？
+      placeholder: 例如：參考這個網站的文件 https://example.com
+    validations:
+      required: false
